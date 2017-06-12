@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class User {
 	private Date dateAdded;
+	private Date dateUpdated;
 	private String emailAddress;
 	private String firstName;
 	private int id;
@@ -12,6 +13,10 @@ public class User {
 	
 	public Date getDateAdded() {
 		return dateAdded;
+	}
+	
+	public Date getDateUpdated() {
+		return dateUpdated;
 	}
 	
 	public String getEmailAddress() {
@@ -34,7 +39,11 @@ public class User {
 		return screenName;
 	}
 	
-	public void setDateAdded(final Date dateAdded) {
+	public void setDateAdded(final Date dateUpdated) {
+		this.dateUpdated = dateUpdated;
+	}
+	
+	public void setDateUpdated(final Date dateAdded) {
 		this.dateAdded = dateAdded;
 	}
 	
