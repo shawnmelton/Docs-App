@@ -1,22 +1,21 @@
-import { APP_LOADED, USER_LOGGED_IN } from '../constants/actionTypes'
+import { ROUTES, ROUTE_CHANGE, ROUTE_INITIAL } from '../constants/routes'
 
 const defaultState = {
-    appLoaded: false,
-    currentUser: null
+    currentRoute: ROUTES.HOME
 }
 
 export default (state = defaultState, action) => {
     switch (action.type) {
-        case APP_LOADED:
+        case ROUTE_CHANGE:
             return {
                 ...state,
-                appLoaded: true
+                currentRoute: action.route
             }
 
-        case USER_LOGGED_IN:
+        case ROUTE_INITIAL:
             return {
                 ...state,
-                currentUser: action.user
+                currentRoute: ROUTE.HOME
             }
 
         default: return state;
