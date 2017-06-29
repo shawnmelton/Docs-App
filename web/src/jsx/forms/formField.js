@@ -2,11 +2,15 @@ import React from 'react'
 
 const template = (component) => {
     return (
-        <div>
-            <label htmlFor={component.props.id}>{component.props.label}</label>
-            <div className="border borderDkGrey bgWhite p10-15">
-                <span className="material-icons">{component.props.icon}</span>
-                <input type="text" name={component.props.id} id={component.props.id} className="widthFull noBorder bgTransparent" />
+        <div className={component.props.classes}>
+            <label className="dBlock mb10" htmlFor={component.props.id}>{component.props.label}</label>
+            <div className="border borderDkGrey bgWhite p5-10 clearFix formFieldContainer">
+                <span className="material-icons dBlock left txtCenter mt5 borderBox">{component.props.icon}</span>
+                <input type={component.props.validation === 'password' ? 'password' : 'text'} 
+                    name={component.props.id}
+                    id={component.props.id}
+                    placeholder={component.props.label}
+                    className="dBlock noBorder bgTransparent left fs125 p5-10 borderBox" />
             </div>
         </div>
     )

@@ -2,10 +2,16 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import template from '../../jsx/views/index'
+import browser from '../../services/browser'
+
+import { ROUTE_CHANGE, ROUTES } from '../../constants/routes'
 
 class Views extends React.Component {
     componentDidMount() {
-        console.log('Current route: ', this.props.currentRoute)
+        const route = browser.getRoute()
+        if (route !== ROUTES.HOME) {
+            this.props.route(route)
+        }
     }
 
     render() {
@@ -17,7 +23,12 @@ const mapStateToProps = state => ({
     currentRoute: state.routes.currentRoute
 })
 
-const mapDispatchToProps = dispatch => ({})
+const mapDispatchToProps = dispatch => ({
+    route: (route) => dispatch({
+        type: ROUTE_CHANGE,
+        route: route
+    })
+})
 
 const ViewsContainer = connect(
     mapStateToProps,

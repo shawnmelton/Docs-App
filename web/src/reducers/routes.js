@@ -15,7 +15,7 @@ export default (state = defaultState, action) => {
         case ROUTE_INITIAL:
             return {
                 ...state,
-                currentRoute: ROUTE.HOME
+                currentRoute: ROUTES.HOME
             }
 
         default: return state;

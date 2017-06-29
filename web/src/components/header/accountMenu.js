@@ -1,15 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { ROUTE_CHANGE, ROUTES } from '../../constants/routes'
-import browserUrl from '../../services/browserUrl'
+import browser from '../../services/browser'
 import template from '../../jsx/header/accountMenu'
+import { ROUTE_CHANGE } from '../../constants/routes'
 
 export class AccountMenu extends React.Component {
     onSignInClick(e) {
         e.preventDefault();
-        browserUrl.update('/sign-in')
-        this.props.routeToSignIn()
+        browser.navigate('/sign-in')
+        this.props.route(browser.getRoute())
     }
 
     render() {
@@ -22,9 +22,9 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    routeToSignIn: () => dispatch({
+    route: (route) => dispatch({
         type: ROUTE_CHANGE,
-        route: ROUTES.SIGN_IN
+        route: route
     })
 })
 

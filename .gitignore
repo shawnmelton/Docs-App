@@ -22,7 +22,10 @@
 hs_err_pid*
 
 web/node_modules
-web/dist/*
+web/dist/*.js
+web/dist/*.html
+web/dist/*.css
+web/dist/*.css.map
 web/.sass-cache
 .DS_Store
 */.DS_Store

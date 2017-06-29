@@ -1,0 +1,9 @@
+.formFieldContainer {
+    span {
+        width: 40px;
+    }
+
+    input {
+        width: calc(100% - 40px);
+    }
+}

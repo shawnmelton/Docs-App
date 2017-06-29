@@ -42,12 +42,13 @@
 .fs100 { font-size: 100%; }
 .fs90 { font-size: 90%; }
 
-.shadow { text-shadow: 1px 1px 2px #555; }
-.boxShadow { box-shadow: 0 1px 0 rgba(0, 0, 0, .25); }
+.txtShadow { text-shadow: 1px 1px 2px rgba(0, 0, 0, .25); }
+.boxShadow { box-shadow: 0 1px 2px rgba(0, 0, 0, .25); }
 
 /* Padding */
 .p0-15 { padding: 0 15px; }
 .p0-25 { padding: 0 25px; }
+.p5-10 { padding: 5px 10px; }
 .p10-15 { padding: 10px 15px; }
 .p15-20 { padding: 15px 20px; }
 .p20-25 { padding: 20px 25px; }
@@ -69,6 +70,7 @@
 .mb25 { margin-bottom: 25px; }
 .mb35 { margin-bottom: 35px; }
 .mb50 { margin-bottom: 50px; }
+.mt5 { margin-top: 5px; }
 .mt15 { margin-top: 15px; }
 .mt25 { margin-top: 25px; }
 .mt50 { margin-top: 50px; }
@@ -106,7 +108,8 @@
 .noListStyle { list-style: none; }
 
 /* Sizing */
-.maxWidth1200 { max-width: 1200px; }
+.maxWidth200 { max-width: 200px; }
+.maxWidth400 { max-width: 400px; }
 
 /* Transparency */
 .opacity0 { opacity: 0.0; }
