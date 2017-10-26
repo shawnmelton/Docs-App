@@ -1,0 +1,19 @@
+@each $color in $colors {
+    .border#{nth($color, 2)} {
+        border-color: nth($color, 1);
+    }
+}
+
+$borderWidths: (1, 3, 5);
+@each $width in $borderWidths {
+    .borderWidth#{$width} {
+        border-width: #{$width}px;
+    }
+}
+
+$borderRadii: (1, 3, 5);
+@each $radius in $borderRadii {
+    .borderWidth#{$radius} {
+        border-radius: #{$radius}px;
+    }
+}

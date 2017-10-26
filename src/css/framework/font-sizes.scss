@@ -1,0 +1,6 @@
+$sizes: (90, 100, 110, 120, 125, 150, 175, 200);
+@each $size in $sizes {
+    .fs#{$size} {
+        font-size: #{$size}#{'%'};
+    }
+}

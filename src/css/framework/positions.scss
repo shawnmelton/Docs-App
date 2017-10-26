@@ -1,0 +1,10 @@
+$positions: (0, 5, 10, 15, 20, 25);
+$sides: (top, bottom, left, right);
+
+@each $position in $positions {
+    @each $side in $sides {
+        .#{$side}#{$position} {
+            #{$side}: #{$position}px;
+        }
+    }
+}

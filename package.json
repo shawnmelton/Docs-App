@@ -1,0 +1,42 @@
+{
+  "name": "docsapp",
+  "version": "1.0.0",
+  "description": "App that will allow for documentation for a business.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "mocha tests/start.js && sass src/css/styles.scss:dist/styles.css --style compressed && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shawnmelton/Docs-App.git"
+  },
+  "author": "Shawn Melton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shawnmelton/Docs-App/issues"
+  },
+  "homepage": "https://github.com/shawnmelton/Docs-App#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^7.0.0",
+    "grunt-browserify": "^5.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "history": "^4.6.2",
+    "minifyify": "^7.3.5",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-devtools": "^3.4.0",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "dependencies": {}
+}

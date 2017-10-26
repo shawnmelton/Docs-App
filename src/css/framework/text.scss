@@ -1,0 +1,5 @@
+@each $color in $colors {
+    .txt#{nth($color, 2)} {
+        color: nth($color, 1);
+    }
+}

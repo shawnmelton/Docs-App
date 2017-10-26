@@ -1,0 +1,85 @@
+/* Backgrounds */
+@import 'framework/backgrounds';
+
+/* Borders */
+.noBorder { border: 0; }
+.border { border: 1px solid rgba(0, 0, 0, 0); }
+@import 'framework/borders';
+
+
+/* Text */
+@import 'framework/text';
+.txtCenter { text-align: center; }
+.txtLowerCase { text-transform: lowercase; }
+.txtUpperCase { text-transform: uppercase; }
+.txtNoUnderline { text-decoration: none; }
+.txtUnderline { text-decoration: underline; }
+.hoverNoUnderline:hover { text-decoration: none; }
+
+.fw100 { letter-spacing: 1px; }
+
+@import 'framework/font-weights';
+@import 'framework/font-sizes';
+
+.txtShadow { text-shadow: 1px 1px 2px rgba(0, 0, 0, .25); }
+.boxShadow { box-shadow: 0 1px 2px rgba(0, 0, 0, .25); }
+
+/* Padding and Margins */
+.center { margin: 0 auto; }
+@import 'framework/paddings-margins';
+
+
+/* Display */
+.block { display: block; }
+.none { display: none; }
+
+/* Positioning */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+@import 'framework/positions';
+
+/* Alignment */
+.left { float: left; }
+.right { float: right; }
+
+/* Line Heights */
+.lineHeight18 { line-height: 1.8; }
+
+/* Lists */
+.noListStyle { list-style: none; }
+
+/* Sizing */
+.maxWidth200 { max-width: 200px; }
+.maxWidth400 { max-width: 400px; }
+
+/* Transparency */
+.opacity0 { opacity: 0.0; }
+
+/* Fixed Heights */
+.height40 {
+    height: 40px;
+    line-height: 40px;
+}
+.height60 {
+    height: 60px;
+    line-height: 60px;
+}
+
+/* Widths */
+.widthHalf { width: 50%; }
+.widthFull { width: 100%; }
+
+/* Other */
+.noOverflow { overflow: hidden; }
+.clearFix:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+.noStyle { list-style: none; }
+.cursor { cursor: pointer; }
+.borderBox { box-sizing: border-box; }
+
+
+

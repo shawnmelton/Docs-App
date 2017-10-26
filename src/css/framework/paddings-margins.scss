@@ -1,0 +1,25 @@
+$spaces: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100, 125);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaces {
+    @each $side in $sides {
+        .m#{str-slice($side, 0, 1)}#{$space} {
+            margin-#{$side}: #{$space}px;
+        }
+
+        .p#{str-slice($side, 0, 1)}#{$space} {
+            padding-#{$side}: #{$space}px;
+        }
+    }
+}
+
+$pairs: ((0, 15), (0, 25), (5, 10), (10, 15), (10, 25), (15, 20), (15, 25), (20, 25), (25, 35), (30, 35));
+@each $pair in $pairs {
+    .m#{nth($pair, 1)}-#{nth($pair, 2)} {
+        margin: #{nth($pair, 1)}px #{nth($pair, 2)}px;
+    }
+
+    .p#{nth($pair, 1)}-#{nth($pair, 2)} {
+        padding: #{nth($pair, 1)}px #{nth($pair, 2)}px;
+    }
+}
