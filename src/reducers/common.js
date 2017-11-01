@@ -1,8 +1,7 @@
-import { APP_LOADED, USER_LOGGED_IN } from '../constants/actionTypes'
+import { APP_LOADED } from '../constants/actionTypes'
 
 const defaultState = {
-    appLoaded: false,
-    currentUser: null
+    appLoaded: false
 }
 
 export default (state = defaultState, action) => {
@@ -11,12 +10,6 @@ export default (state = defaultState, action) => {
             return {
                 ...state,
                 appLoaded: true
-            }
-
-        case USER_LOGGED_IN:
-            return {
-                ...state,
-                currentUser: action.user
             }
 
         default: return state;

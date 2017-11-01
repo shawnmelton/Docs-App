@@ -1,2 +1,3 @@
 export const APP_LOADED = 'APP_LOADED'
-export const USER_LOGGED_IN = 'USER_LOGGED_IN'
+export const UPDATE_ACCOUNT = 'UPDATE_ACCOUNT'
+export const UPDATE_FORMS = 'UPDATE_FORMS'

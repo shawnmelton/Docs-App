@@ -10,7 +10,10 @@ const template = (component) => {
                     name={component.props.id}
                     id={component.props.id}
                     placeholder={component.props.label}
-                    className="dBlock noBorder bgTransparent left fs110 p5-10 borderBox" />
+                    className="dBlock noBorder bgTransparent left fs110 p5-10 borderBox"
+                    onChange={(e) => {
+                        component.props.changeAction(e)
+                    }} />
             </div>
         </div>
     )

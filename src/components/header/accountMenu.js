@@ -6,10 +6,14 @@ import template from '../../jsx/header/accountMenu'
 import { ROUTE_CHANGE } from '../../constants/routes'
 
 export class AccountMenu extends React.Component {
-    onSignInClick(e) {
+    onLinkClick(e) {
         e.preventDefault();
-        browser.navigate('/sign-in')
-        this.props.route(browser.getRoute())
+        if (this.props.userLoggedIn === false) {
+            browser.navigate('/sign-in')
+            this.props.route(browser.getRoute())
+        } else {
+            console.log('TODO - Go to account')
+        }
     }
 
     render() {
@@ -18,7 +22,8 @@ export class AccountMenu extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    currentUser: state.common.currentUser
+    userLoggedIn: state.account.loggedIn,
+    userScreenName: state.account.screenName
 })
 
 const mapDispatchToProps = dispatch => ({

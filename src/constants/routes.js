@@ -1,4 +1,5 @@
 export const ROUTES = {
+    DASHBOARD: 'DASHBOARD',
     HOME: 'HOME',
     SIGN_IN: 'SIGN_IN'
 }

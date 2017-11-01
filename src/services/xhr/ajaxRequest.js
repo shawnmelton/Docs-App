@@ -1,3 +1,4 @@
+import logger from '../logger'
 import 'whatwg-fetch'
 
 class AjaxRequest {
@@ -21,8 +22,14 @@ class AjaxRequest {
             requestObj.body = this.body
         }
 
+        logger.log('AjaxRequest', requestObj)
+
         const response = await fetch(this.url, requestObj)
-        return response.json()
+        const json = response.json()
+
+        logger.log('AjaxRequest', json)
+
+        return json
     }
 
     setBody(object) {

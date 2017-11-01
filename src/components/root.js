@@ -2,13 +2,16 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { APP_LOADED } from '../constants/actionTypes'
 import { ROUTES, ROUTE_CHANGE, ROUTE_INITIAL } from '../constants/routes'
-
+import logger from '../services/logger'
 import template from '../jsx/root'
 
 export class Root extends React.Component {
     componentDidMount() {
+        logger.setOutput(true)
+        logger.log('Root', 'App has been loaded.')
+
         this.props.onLoad()
-        if (this.props.currentUser === null && this.props.currentRoute !== ROUTES.SIGN_IN && this.props.currentRoute !== ROUTES.HOME) {
+        if (this.props.userLoggedIn === null && this.props.currentRoute !== ROUTES.SIGN_IN && this.props.currentRoute !== ROUTES.HOME) {
             this.props.routeSignIn()
         }
     }
@@ -24,7 +27,7 @@ export class Root extends React.Component {
 
 const mapStateToProps = state => ({
     appLoaded: state.common.appLoaded,
-    currentUser: state.common.currentUser,
+    userLoggedIn: state.account.loggedIn,
     currentRoute: state.routes.currentRoute
 })
 
